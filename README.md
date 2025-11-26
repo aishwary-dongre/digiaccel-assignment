@@ -1,214 +1,103 @@
-# To-Do List Mobile App
+# To-Do List Mobile App 📝
 
-A fully responsive, modern To-Do List application built with React, TypeScript, Tailwind CSS, and Zustand for state management. This app allows users to efficiently manage their tasks with weekly organization, priority levels, and real-time search functionality.
+A clean and simple to-do list app that helps you stay organized. Built with React, TypeScript, and Tailwind CSS.
 
-![To-Do List App](https://img.shields.io/badge/React-18.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.2.2-blue) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.0-blue)
+**[Live Demo →](https://your-app.netlify.app)**
 
-## ✨ Features
+## What It Does
 
-### Core Functionality
-- ✅ **Create Tasks** - Add tasks with title, description, date/time, and priority
-- ✏️ **Edit Tasks** - Update any task attribute
-- 🗑️ **Delete Tasks** - Remove tasks with confirmation
-- 🔍 **Search Tasks** - Real-time search by title or description
-- ✔️ **Task Status** - Toggle between "In Progress" and "Completed"
+This is a mobile-friendly task manager where you can:
+- Add, edit, and delete tasks
+- Set priorities (High, Medium, Low)
+- Search through your tasks
+- See your tasks organized by week
+- Track your weekly progress
 
-### UI/UX Features
-- 📅 **Weekly Organization** - Tasks grouped by week (Monday - Sunday)
-- 📊 **Progress Tracking** - Visual weekly progress bars
-- 🎨 **Priority Levels** - Low, Medium, High with color coding
-- 📱 **Fully Responsive** - Mobile-first design
-- 🌊 **Smooth Animations** - Polished user experience
-- 💾 **Data Persistence** - Tasks saved to local storage
+Everything saves automatically to your browser, so you won't lose your tasks when you refresh the page.
 
-## 🚀 Getting Started
+## Screenshots
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+[Add a screenshot or two here when you can]
 
-### Installation
+## Running It Locally
 
-1. **Clone the repository**
+You'll need Node.js installed. Then:
 ```bash
+# Get the code
 git clone <your-repo-url>
 cd todo-app
-```
 
-2. **Install dependencies**
-```bash
+# Install stuff
 npm install
-```
 
-3. **Start the development server**
-```bash
+# Start it up
 npm run dev
 ```
 
-The app will open at `http://localhost:5173`
+Open `http://localhost:5173` and you're good to go!
 
-## 📦 Build for Production
+## Tech Stack
 
+- React 18 with TypeScript
+- Tailwind CSS for styling
+- Zustand for state management
+- Vite as the build tool
+- date-fns for handling dates
+- React Hook Form + Zod for forms
+
+## Building for Production
 ```bash
 npm run build
 ```
 
-The production-ready files will be in the `dist` folder.
+This creates a `dist` folder with everything optimized and ready to deploy.
 
-## 🌐 Deployment
+## Deployment
 
-### Deploy to Netlify
-
-1. **Install Netlify CLI**
-```bash
-npm install -g netlify-cli
-```
-
-2. **Build the project**
+I deployed this on Netlify. It was pretty straightforward:
 ```bash
 npm run build
+netlify deploy --prod
 ```
 
-3. **Deploy**
-```bash
-netlify deploy --prod --dir=dist
+You can also just drag the `dist` folder into Netlify's web interface.
+
+## How It Works
+
+The app groups your tasks by week (Monday through Sunday) and shows you:
+- How many tasks you've completed
+- How many are still pending
+- A progress bar for the week
+
+Tasks are stored in your browser's localStorage, so they persist between sessions. No backend needed!
+
+## Project Structure
+```
+src/
+├── components/     # UI components (modals, cards, etc.)
+├── pages/          # Main screens
+├── store/          # Zustand state management
+├── types/          # TypeScript definitions
+└── utils/          # Helper functions
 ```
 
-### Alternative: Deploy via Netlify UI
+## Things I'd Like to Add
 
-1. Build your project: `npm run build`
-2. Go to [Netlify](https://app.netlify.com)
-3. Drag and drop the `dist` folder
-
-## 🛠️ Technology Stack
-
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool
-- **Tailwind CSS** - Styling
-- **Zustand** - State management
-- **date-fns** - Date utilities
-- **React Hook Form** - Form handling
-- **Zod** - Schema validation
-- **Lucide React** - Icons
-
-## 📁 Project Structure
-
-```
-todo-app/
-├── src/
-│   ├── components/
-│   │   ├── Onboarding.tsx       # Welcome screen
-│   │   ├── WeekCard.tsx         # Weekly summary card
-│   │   ├── TaskItem.tsx         # Individual task component
-│   │   └── TaskModal.tsx        # Add/Edit task modal
-│   ├── pages/
-│   │   └── Home.tsx             # Main home screen
-│   ├── store/
-│   │   └── taskStore.ts         # Zustand store
-│   ├── types/
-│   │   └── index.ts             # TypeScript types
-│   ├── utils/
-│   │   └── dateUtils.ts         # Date helper functions
-│   ├── App.tsx                  # Main app component
-│   ├── main.tsx                 # Entry point
-│   └── index.css                # Global styles
-├── public/
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-└── vite.config.ts
-```
-
-## 🎯 Key Features Implementation
-
-### Weekly Task Organization
-Tasks are automatically grouped by week (Monday-Sunday) using `date-fns` utilities. Each week displays:
-- Number of completed tasks
-- Number of open tasks
-- Progress bar showing completion percentage
-
-### Search Functionality
-Real-time search filters tasks by title and description as you type.
-
-### Priority System
-Three priority levels with visual indicators:
-- 🔴 High - Red badge
-- 🟡 Medium - Yellow badge
-- 🟢 Low - Green badge
-
-### State Management
-Zustand provides efficient state management with:
-- Persistent storage (localStorage)
-- Optimistic updates
-- Clean API for task operations
-
-## 🎨 UI Design
-
-The app follows the provided Figma design with:
-- Clean, modern interface
-- Indigo primary color scheme
-- Smooth animations and transitions
-- Mobile-optimized layout
-- Intuitive touch interactions
-
-## 📱 Mobile Optimization
-
-- Responsive breakpoints for all screen sizes
-- Touch-friendly button sizes (min 44x44px)
-- Swipe gestures support
-- Mobile keyboard optimization
-- Bottom sheet modals for task creation
-
-## 🔒 Data Persistence
-
-Tasks are automatically saved to localStorage using Zustand's persist middleware. Data persists across browser sessions.
-
-## 🧪 Testing the App
-
-### Sample Workflow
-
-1. **First Visit** - See onboarding screen
-2. **Add Task** - Click the + button
-3. **Fill Details** - Enter title, date, time, priority
-4. **View Tasks** - See tasks organized by week
-5. **Edit Task** - Click edit button on any task
-6. **Complete Task** - Click checkbox to mark complete
-7. **Search** - Use search bar to find tasks
-8. **Delete Task** - Click delete button with confirmation
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 👨‍💻 Author
-
-Built with ❤️ using React and TypeScript
-
-## 🐛 Known Issues
-
-None at the moment. Please report any issues you find!
-
-## 🔮 Future Enhancements
-
-- Backend API integration
-- User authentication
-- Task categories/tags
-- Recurring tasks
-- Task notifications
+- Backend integration so tasks sync across devices
+- User accounts
+- Task categories or tags
 - Dark mode
-- Multi-language support
-- Task export/import
+- Recurring tasks
+- Push notifications
 
-## 📞 Support
+## Issues?
 
-For support, please open an issue in the GitHub repository.
+If something's not working, please open an issue. I'm happy to help!
+
+## License
+
+MIT - feel free to use this however you want.
 
 ---
 
-**Happy Task Managing! 📝✨**
+Made as part of an SDE-1 assessment. Thanks for checking it out! 🚀
