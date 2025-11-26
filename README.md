@@ -21,8 +21,8 @@ A mobile-first to-do list app built with React and TypeScript. Manage tasks with
 ## Quick Start
 ```bash
 # Clone and install
-git clone https://github.com/YOUR_USERNAME/todo-app.git
-cd todo-app
+git clone https://github.com/aishwary-dongre/digiaccel-assignment.git
+cd digiaccel-assignment
 npm install
 
 # Run locally
@@ -84,4 +84,4 @@ MIT
 
 ---
 
-Built by [Your Name](https://github.com/aishwary-dongre) • [Live Demo](https://digiiiiaccel.netlify.app/)
+Built by [Aishwary Dongre](https://github.com/aishwary-dongre) • [Live Demo](https://digiiiiaccel.netlify.app/)
